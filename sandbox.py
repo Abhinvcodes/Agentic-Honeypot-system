@@ -1,10 +1,14 @@
 import asyncio
 import httpx
 import sys
+from datetime import datetime
 
 TARGET_URL = "http://localhost:8000/api/honeypot"
 API_KEY = "test-key-12345"
-SESSION_ID = "interactive-sandbox-session"
+# This guarantees the server builds a completely clean profile every time you launch it.
+# FIX: Generates a clean, readable timestamp format (e.g., 2026-05-23_13-45-12)
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+SESSION_ID = f"interactive-sandbox-session-{timestamp}"
 
 async def async_input(prompt: str) -> str:
     """
