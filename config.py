@@ -9,7 +9,6 @@ class Settings(BaseSettings):
     AI_MODEL_NAME: str = Field(default="")
 
     API_SECRET_KEY: str = Field(default="")
-    GUVI_CALLBACK_ENDPOINT: str = Field(default="")
 
     # Automatically load from the local .env file
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
