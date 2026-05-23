@@ -1,0 +1,13 @@
+# Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Local Development Secrets & Database Logs
+.env
+logs/
+
+# Editor and AI Agent Sandboxes
+.vscode/
+worktrees/
+.git/worktrees/
